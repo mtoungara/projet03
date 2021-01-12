@@ -5,7 +5,6 @@ dnf install -y epel-release
 dnf info ansible --repo=epel
 dnf install ansible --best -y 
 dnf install python3-argcomplete --best -y
-dnf install vim --best -y
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 dnf check-update -y
@@ -16,7 +15,7 @@ systemctl start docker
 systemctl enable docker
 sudo usermod -aG docker vagrant
 sudo curl https://raw.githubusercontent.com/mtoungara/projet03/master/Dockerfile -so  Dockerfile
-docker build -t ubuntu-prj04:21.04 .
-docker run -dit --name prj04 -p 80:8080 ubuntu-prj04:21.04
+docker build -t ubuntu-prj03:21.04 .
+docker run -dit --name prj03 -p 80:8080 ubuntu-prj03:21.04
 
 
