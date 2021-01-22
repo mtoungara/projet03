@@ -15,7 +15,7 @@ systemctl start docker
 systemctl enable docker
 sudo usermod -aG docker vagrant
 sudo curl https://raw.githubusercontent.com/mtoungara/projet03/master/Dockerfile -so  Dockerfile
-docker build -t ubuntu-prj03:21.04 .
-docker run -dit --name prj03 -p 80:8080 ubuntu-prj03:21.04
+docker build -t ubuntu-prj3:21.04 .
+docker run -dit --name prj3 -p 80:8080 ubuntu-prj3:21.04
 
 
